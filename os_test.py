@@ -25,7 +25,6 @@ def file_browser(dir_path, depth):
 
         if file.is_dir():
             file_browser(dir_path + "/" + name, depth + 1)
-            print("|")
 
 
 file_browser(dir_path, 0)

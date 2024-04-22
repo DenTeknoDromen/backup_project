@@ -1,4 +1,3 @@
-Fixa finare print
 Fixa datum check på folder
 Fixa loggfil
 Fixa med flera backups
