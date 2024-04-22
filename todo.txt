@@ -1,0 +1,8 @@
+Fixa finare print
+Fixa datum check på folder
+Fixa loggfil
+Fixa med flera backups
+Fixa med gb räknare
+Testa med absoluta paths
+Testa med riktig raspberry pi eller liknande
+Testa med i moln

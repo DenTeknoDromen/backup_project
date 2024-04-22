@@ -3,16 +3,17 @@ from datetime import datetime
 import os
 
 client = Minio("127.0.0.1:9000",
-            secure=False,
-            access_key="minioadmin",
-            secret_key="minioadmin")
+               secure=False,
+               access_key="minioadmin",
+               secret_key="minioadmin")
 
 bucket_name = "backup"
+dir_path = "test_dir"
+
 
 def main():
     print("placeholder")
 
-dir_path = "test_dir"
 
 def check_last_modified(last_modified):
     last_backup = datetime.fromisoformat("1995-11-25")
@@ -21,6 +22,7 @@ def check_last_modified(last_modified):
         return True
     else:
         return False
+
 
 def file_browser(dir_path, depth):
     dir = os.scandir(dir_path)
@@ -38,8 +40,10 @@ def file_browser(dir_path, depth):
             file_browser(f"{dir_path}/{name}", depth + 1)
         elif check_last_modified(date):
             print("\t" * (depth + 1) + name + " Last modified: " + date)
-            client.fput_object(bucket_name, f"{file_path}/{name}", f"{file_path}/{name}")
+            client.fput_object(
+                bucket_name, f"{file_path}/{name}", f"{file_path}/{name}")
+
 
 if __name__ == "__main__":
     file_browser(dir_path, -1)
-    #print(check_last_modified("2024-04-21"))
+    # print(check_last_modified("2024-04-21"))
