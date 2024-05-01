@@ -1,5 +1,39 @@
-Last backup: 2024-05-01 14:47
-----------------------------------------
+2024-05-01 20:32 - Backup completed!
+2024-05-01 20:32 - test_dir/dir_1/file_1 copied to backup
+2024-05-01 20:32 - test_dir/dir_1/file_2 copied to backup
+2024-05-01 20:32 - test_dir/dir_2/file_2.1 copied to backup
+2024-05-01 20:32 - test_dir/dir_2/file_2.2 copied to backup
+2024-05-01 20:32 - test_dir/dir_2/sub_dir/subfile copied to backup
+2024-05-01 20:32 - test_dir/dir_2/sub_dir/sub_dir_2/sub_file_2 copied to backup
+2024-05-01 20:32 - test_dir/dir_3/file_3.1 copied to backup
+2024-05-01 20:32 - test_dir/dir_3/file_3.2 copied to backup
+2024-05-01 20:32 - test_dir/test_2.txt copied to backup
+2024-05-01 20:32 - test_dir/test_3.txt copied to backup
+2024-05-01 20:32 - test_dir/test_4.txt copied to backup
+2024-05-01 20:32 - test_dir/test_5.txt copied to backup
+2024-05-01 20:32 - Backup completed!
+2024-05-01 20:28 - Backup completed!
+2024-04-23 00:10 - test_dir/dir_1/file_1 copied to backup
+2024-04-23 00:10 - test_dir/dir_1/file_2 copied to backup
+2024-04-23 00:10 - test_dir/dir_2/file_2.1 copied to backup
+2024-04-23 00:10 - test_dir/dir_2/file_2.2 copied to backup
+2024-04-23 00:10 - test_dir/dir_2/sub_dir/subfile copied to backup
+2024-04-23 00:15 - test_dir/dir_2/sub_dir/sub_dir_2/sub_file_2 copied to backup
+2024-04-23 00:10 - test_dir/dir_3/file_3.1 copied to backup
+2024-04-23 00:10 - test_dir/dir_3/file_3.2 copied to backup
+2024-05-01 16:49 - test_dir/test_2.txt copied to backup
+2024-05-01 16:49 - test_dir/test_3.txt copied to backup
+2024-04-23 00:10 - test_dir/test_4.txt copied to backup
+2024-04-23 00:10 - test_dir/test_5.txt copied to backup
+2024-05-01 20:27 - Backup completed!
+2024-04-23 00:10 - test_dir/dir_1/file_1 copied to backup2024-04-23 00:10 - test_dir/dir_1/file_2 copied to backup2024-04-23 00:10 - test_dir/dir_2/file_2.1 copied to backup2024-04-23 00:10 - test_dir/dir_2/file_2.2 copied to backup2024-04-23 00:10 - test_dir/dir_2/sub_dir/subfile copied to backup2024-04-23 00:15 - test_dir/dir_2/sub_dir/sub_dir_2/sub_file_2 copied to backup2024-04-23 00:10 - test_dir/dir_3/file_3.1 copied to backup2024-04-23 00:10 - test_dir/dir_3/file_3.2 copied to backup2024-05-01 16:49 - test_dir/test_2.txt copied to backup2024-05-01 16:49 - test_dir/test_3.txt copied to backup2024-04-23 00:10 - test_dir/test_4.txt copied to backup2024-04-23 00:10 - test_dir/test_5.txt copied to backup2024-05-01 16:55 - Backup completed!
+2024-04-23 00:10 - test_dir/dir_1/file_1 copied to backup2024-04-23 00:10 - test_dir/dir_1/file_2 copied to backup2024-04-23 00:10 - test_dir/dir_2/file_2.1 copied to backup2024-04-23 00:10 - test_dir/dir_2/file_2.2 copied to backup2024-04-23 00:10 - test_dir/dir_2/sub_dir/subfile copied to backup2024-04-23 00:15 - test_dir/dir_2/sub_dir/sub_dir_2/sub_file_2 copied to backup2024-04-23 00:10 - test_dir/dir_3/file_3.1 copied to backup2024-04-23 00:10 - test_dir/dir_3/file_3.2 copied to backup2024-05-01 16:49 - test_dir/test_2.txt copied to backup2024-05-01 16:49 - test_dir/test_3.txt copied to backup2024-04-23 00:10 - test_dir/test_4.txt copied to backup2024-04-23 00:10 - test_dir/test_5.txt copied to backup2024-05-01 16:49 - Backup completed!
+2024-05-01 16:49 - test_dir/test_2.txt copied to backup2024-05-01 16:49 - test_dir/test_3.txt copied to backup2024-05-01 16:45 - Backup completed!
+2024-05-01 16:45 - test_dir/test_2.txt copied to backup2024-05-01 16:44 - Backup completed!
+2024-05-01 16:39 - Backup completed!
+2024-05-01 16:35 - Backup completed!
+2024-05-01 16:34 - Backup completed!
+2024-05-01 16:22 - Backup completed!
 test
 test
 test

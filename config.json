@@ -5,5 +5,5 @@
 "secret_key": "minioadmin",
 "bucket_name": "backup",
 "dir_path": "test_dir",
-"last_backup": "1995-11-25"
+"last_backup": "2024-05-01 20:32"
 }

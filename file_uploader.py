@@ -7,6 +7,9 @@ class FileUploader():
     def __init__(self, client, config):
         self.client = client
         self.config = config
+        self.log = []
+        self.curr_date = datetime.now().isoformat(timespec="minutes")
+        self.curr_date = self.curr_date.replace("T", " ")
         #super().__init__()  # Name of config and log file should be passed as parameters
 #        config = self.config
         # client = Minio(f"{config['endpoint']}:{config['port']}",
@@ -19,6 +22,9 @@ class FileUploader():
     #dir_path = Backup.dir_path
 
     # Checks if current file has been changed since last backup
+    def get_log(self):
+        return self.log
+
     def check_last_modified(self, last_modified):
         last_backup = datetime.fromisoformat(self.config["last_backup"])
         last_modified = datetime.fromisoformat(last_modified)
@@ -51,9 +57,10 @@ class FileUploader():
 
             if file.is_dir() and self.check_last_modified(date):
                 self.file_browser(f"{dir_path}/{name}", depth + 1)
-            #elif self.check_last_modified(date):                
+            elif self.check_last_modified(date):
+                self.log.append(f"{self.curr_date} - {dir_path}/{name} copied to {self.config['bucket_name']}\n")        
                 #self.client.fput_object(
-                #self.bucket_name, f"{file_path}/{name}", f"{file_path}/{name}")              
+                #self.bucket_name, f"{file_path}/{name}", f"{file_path}/{name}")           p   
 
 
 if __name__ == "__main__":
@@ -61,5 +68,5 @@ if __name__ == "__main__":
     #file_uploader = FileUploader
     #file_uploader.file_browser(-1)
     upload = FileUploader()
-    upload.file_browser(upload.file_path,0)
+    upload.file_browser(upload.file_path, 0)
     # print(check_last_modified("2024-04-21"))
