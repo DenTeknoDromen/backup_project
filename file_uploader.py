@@ -1,49 +1,53 @@
 from minio import Minio
 from datetime import datetime
+from init import Backup
 import os
 
-client = Minio("127.0.0.1:9000",
-               secure=False,
-               access_key="minioadmin",
-               secret_key="minioadmin")
+class FileUploader(Backup):       
+    def __init__(self):
+        super().__init__("")
+        config = self.config
+        client = Minio(f"{config['endpoint']}:{config['port']}",
+                        secure=False,
+                        access_key=config["access_key"],
+                        secret_key=config["secret_key"])
+    
 
-bucket_name = "backup"
-dir_path = "test_dir"
+    #bucket_name = Backup.bucket_name
+    #dir_path = Backup.dir_path
 
+    def check_last_modified(last_modified):
+        last_backup = datetime.fromisoformat("1995-11-25")
+        last_modified = datetime.fromisoformat(last_modified)
+        if last_modified >= last_backup:
+            return True
+        else:
+            return False
 
-def main():
-    print("placeholder")
+    def file_browser(self, dir_path, depth):
+        dir = os.scandir(dir_path)
+        file_path = dir_path
 
+        print("\t" * (depth) + dir_path)
 
-def check_last_modified(last_modified):
-    last_backup = datetime.fromisoformat("1995-11-25")
-    last_modified = datetime.fromisoformat(last_modified)
-    if last_modified >= last_backup:
-        return True
-    else:
-        return False
+        for file in dir:
+            name = file.name
+            unix_time = file.stat().st_mtime
+            date = datetime.fromtimestamp(unix_time).isoformat(timespec="minutes")
+            date = date.replace("T", " ")
 
-
-def file_browser(dir_path, depth):
-    dir = os.scandir(dir_path)
-    file_path = dir_path
-
-    print("\t" * (depth) + dir_path)
-
-    for file in dir:
-        name = file.name
-        unix_time = file.stat().st_mtime
-        date = datetime.fromtimestamp(unix_time).isoformat(timespec="minutes")
-        date = date.replace("T", " ")
-
-        if file.is_dir():
-            file_browser(f"{dir_path}/{name}", depth + 1)
-        elif check_last_modified(date):
-            print("\t" * (depth + 1) + name + " Last modified: " + date)
-            client.fput_object(
-                bucket_name, f"{file_path}/{name}", f"{file_path}/{name}")
+            if file.is_dir() and self.check_last_modified(date):
+                self.file_browser(f"{dir_path}/{name}", depth + 1)
+            elif self.check_last_modified(date):
+                print("\t" * (depth + 1) + name + " Last modified: " + date)
+                #self.client.fput_object(
+                #self.bucket_name, f"{file_path}/{name}", f"{file_path}/{name}")
 
 
 if __name__ == "__main__":
-    file_browser(dir_path, -1)
+    #curr_backup = Backup()
+    #file_uploader = FileUploader
+    #file_uploader.file_browser(-1)
+    upload = FileUploader()
+    upload.file_browser(-1)
     # print(check_last_modified("2024-04-21"))
