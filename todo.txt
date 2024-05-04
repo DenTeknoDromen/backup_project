@@ -1,4 +1,3 @@
-Fixa loggfil
 Fixa med flera backups
 Fixa med gb räknare
 Testa med absoluta paths
@@ -7,3 +6,4 @@ Testa med i moln
 
 Fixat
 Fixa datum check på folder
+Fixa loggfil

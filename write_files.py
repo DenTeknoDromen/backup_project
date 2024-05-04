@@ -1,8 +1,7 @@
 from datetime import datetime
 from json import dumps
 
-def write_log(curr_log, curr_date):
-    curr_log.insert(0, f"{curr_date} - Backup completed!\n")
+def write_log(curr_log):    
     with open("log.txt", "w") as f:
         f.writelines(curr_log)
 
@@ -14,8 +13,9 @@ def write_config(curr_config):
 def log_backup(output_str, curr_config):
     curr_date = datetime.now().isoformat(timespec="minutes")
     curr_date = curr_date.replace("T", " ")
-    curr_config["last_backup"] = curr_date
-    write_log(output_str, curr_date)
+    output_str.insert(0, f"{curr_date} - Backup to {curr_config['bucket_name']} completed!\n")
+    curr_config['last_backup'] = curr_date
+    write_log(output_str)
     write_config(curr_config)
 
         

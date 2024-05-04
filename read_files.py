@@ -1,8 +1,8 @@
 from json import loads
 
 # Loads dictionary with settings from jsonfile
-def load_config():
-    curr_path = "./config.json"
+def load_config(curr_path):
+    curr_path = curr_path   # "./config.json"
     try:
         with open(curr_path, "r") as f:
             file_content = f.read()
