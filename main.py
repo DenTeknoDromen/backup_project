@@ -1,12 +1,13 @@
 from os import scandir
 from init import Backup
-from default_config import create_default_config
+import logger
 
-curr_dir = scandir("./")
+config_dir = scandir("./configfiles/")
 check = 0
-for files in curr_dir:
+for files in config_dir:
     if files.name.endswith("config.json"):
         curr_backup = Backup(files.path)
         check += 1
 if check == 0:
     create_default_config()
+    logger.write_log("No config file found, creating new one")

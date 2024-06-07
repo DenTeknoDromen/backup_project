@@ -1,14 +1,15 @@
-from write_files import log_backup
-from read_files import load_config, load_log
-from file_uploader_2 import FileUploader
+import file_uploader_2
 from minio import Minio
+import logger
+import utils
+
 class Backup:
     def __init__(self, curr_path):
-        self.config = load_config(curr_path)
-        self.curr_log = load_log()
+        self.config = utils.load_config(curr_path)
+        self.curr_log = utils.load_log()
         self.dir_path = self.config["dir_path"]
 
-        self.curr_log.insert(0, f"Backup to {self.config['bucket_name']} started\n")
+        logger.write_log(f"Backup to {self.config['bucket_name']} started")
 
         try:
             client = Minio(f"{self.config['endpoint']}:{self.config['port']}",
@@ -23,11 +24,12 @@ class Backup:
         except Exception as e:
             print("Connection to server failed")
 
-        upload = FileUploader(client, self.config)
+        upload = file_uploader_2.FileUploader(client, self.config)
         upload.file_browser(self.dir_path, 0)
 
-        self.curr_log = upload.get_log() + self.curr_log
-        log_backup(self.curr_log, self.config)
+        logger.write_log(f"Backup to {self.config['bucket_name']} completed!")
+        client.fput_object(self.config["bucket_name"], "test_logging.txt", "test_logging.txt")
+        client.fput_object(self.config["bucket_name"], "configfile.txt", curr_path)
 
 
     
