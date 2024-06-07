@@ -1,7 +1,8 @@
 from minio import Minio
 from datetime import datetime
 #from init import Backup
-from os import scandir
+from tar_test import make_tarfile
+from os import scandir, remove
 
 class FileUploader():       
     def __init__(self, client, config):
@@ -46,6 +47,7 @@ class FileUploader():
     # Rcursive method that goes through every file in directory and uploads to endpoint
     def file_browser(self, dir_path, depth):
         dir = scandir(dir_path)
+        temp = scandir("temp/")
 
         for file in dir:
             name = file.name
@@ -56,10 +58,10 @@ class FileUploader():
             print(self.get_printline(f"{name}, Last modified: {date}", depth))
 
             if file.is_dir() and self.check_last_modified(date):
-                self.file_browser(f"{dir_path}/{name}", depth + 1)
-            elif self.check_last_modified(date):
-                self.log.append(f"{self.curr_date} - {dir_path}/{name} copied to {self.config['bucket_name']}\n")        
-                self.client.fput_object(self.config["bucket_name"], f"{dir_path}/{name}", f"{dir_path}/{name}")
+                make_tarfile(f"{dir_path}/{name}", name)
+                self.client.fput_object(self.config["bucket_name"], name + ".tar", f"temp/{name}.tar")
+                remove(f"temp/{name}.tar")
+
 
 
 if __name__ == "__main__":

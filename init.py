@@ -1,6 +1,6 @@
 from write_files import log_backup
 from read_files import load_config, load_log
-from file_uploader import FileUploader
+from file_uploader_2 import FileUploader
 from minio import Minio
 class Backup:
     def __init__(self, curr_path):
