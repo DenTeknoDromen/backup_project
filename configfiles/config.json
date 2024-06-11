@@ -5,5 +5,6 @@
 "secret_key": "minioadmin",
 "bucket_name": "backup",
 "dir_path": "test_dir",
-"last_backup": "2020-06-07 19:09"
+"last_backup": "2024-06-08 12:14",
+"full_backup": "yes"
 }

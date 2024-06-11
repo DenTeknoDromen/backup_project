@@ -39,3 +39,91 @@
 2024-06-07 20:06 test_dir/dir_3 copied to backup
 2024-06-07 20:06 http://127.0.0.1:9000 "PUT /backup/test_logging.txt HTTP/1.1" 200 0
 2024-06-07 20:06 http://127.0.0.1:9000 "PUT /backup/configfile.txt HTTP/1.1" 200 0
+2024-06-08 00:38 Backup to backup started
+2024-06-08 00:39 Backup to backup started
+2024-06-08 00:39 Starting new HTTP connection (1): 127.0.0.1:9000
+2024-06-08 00:39 http://127.0.0.1:9000 "GET /backup?location= HTTP/1.1" 200 0
+2024-06-08 00:39 http://127.0.0.1:9000 "PUT /backup/dir_1.tar HTTP/1.1" 200 0
+2024-06-08 00:39 test_dir/dir_1 copied to backup
+2024-06-08 00:39 http://127.0.0.1:9000 "PUT /backup/dir_2.tar HTTP/1.1" 200 0
+2024-06-08 00:39 test_dir/dir_2 copied to backup
+2024-06-08 00:39 http://127.0.0.1:9000 "PUT /backup/dir_3.tar HTTP/1.1" 200 0
+2024-06-08 00:39 test_dir/dir_3 copied to backup
+2024-06-08 00:39 Backup to backup completed!
+2024-06-08 00:39 http://127.0.0.1:9000 "PUT /backup/test_logging.txt HTTP/1.1" 200 0
+2024-06-08 00:39 http://127.0.0.1:9000 "PUT /backup/configfile.txt HTTP/1.1" 200 0
+2024-06-08 11:48 Backup to backup started
+2024-06-08 11:48 Starting new HTTP connection (1): 127.0.0.1:9000
+2024-06-08 11:48 http://127.0.0.1:9000 "GET /backup?location= HTTP/1.1" 200 0
+2024-06-08 11:48 http://127.0.0.1:9000 "PUT /backup/dir_1.tar HTTP/1.1" 200 0
+2024-06-08 11:48 test_dir/dir_1 copied to backup
+2024-06-08 11:48 http://127.0.0.1:9000 "PUT /backup/dir_2.tar HTTP/1.1" 200 0
+2024-06-08 11:48 test_dir/dir_2 copied to backup
+2024-06-08 11:48 http://127.0.0.1:9000 "PUT /backup/dir_3.tar HTTP/1.1" 200 0
+2024-06-08 11:48 test_dir/dir_3 copied to backup
+2024-06-08 11:48 Backup to bucket: backup completed!
+2024-06-08 11:48 http://127.0.0.1:9000 "PUT /backup/_test_logging.txt HTTP/1.1" 200 0
+2024-06-08 11:48 http://127.0.0.1:9000 "PUT /backup/_configfile.txt HTTP/1.1" 200 0
+2024-06-08 11:49 Backup to backup started
+2024-06-08 11:49 Starting new HTTP connection (1): 127.0.0.1:9000
+2024-06-08 11:49 http://127.0.0.1:9000 "GET /backup?location= HTTP/1.1" 200 0
+2024-06-08 11:49 http://127.0.0.1:9000 "PUT /backup/dir_1.tar HTTP/1.1" 200 0
+2024-06-08 11:49 test_dir/dir_1 copied to backup
+2024-06-08 11:49 http://127.0.0.1:9000 "PUT /backup/dir_2.tar HTTP/1.1" 200 0
+2024-06-08 11:49 test_dir/dir_2 copied to backup
+2024-06-08 11:49 http://127.0.0.1:9000 "PUT /backup/dir_3.tar HTTP/1.1" 200 0
+2024-06-08 11:49 test_dir/dir_3 copied to backup
+2024-06-08 11:49 Backup to bucket: backup completed!
+2024-06-08 11:49 http://127.0.0.1:9000 "PUT /backup/_test_logging.txt HTTP/1.1" 200 0
+2024-06-08 11:49 http://127.0.0.1:9000 "PUT /backup/_configfile.txt HTTP/1.1" 200 0
+2024-06-08 11:50 Backup to backup started
+2024-06-08 11:50 Starting new HTTP connection (1): 127.0.0.1:9000
+2024-06-08 11:50 http://127.0.0.1:9000 "GET /backup?location= HTTP/1.1" 200 0
+2024-06-08 11:50 http://127.0.0.1:9000 "PUT /backup/dir_1.tar HTTP/1.1" 200 0
+2024-06-08 11:50 test_dir/dir_1 copied to backup
+2024-06-08 11:50 http://127.0.0.1:9000 "PUT /backup/dir_2.tar HTTP/1.1" 200 0
+2024-06-08 11:50 test_dir/dir_2 copied to backup
+2024-06-08 11:50 http://127.0.0.1:9000 "PUT /backup/dir_3.tar HTTP/1.1" 200 0
+2024-06-08 11:50 test_dir/dir_3 copied to backup
+2024-06-08 11:50 Backup to backup started
+2024-06-08 11:50 Starting new HTTP connection (1): 127.0.0.1:9000
+2024-06-08 11:50 http://127.0.0.1:9000 "GET /backup?location= HTTP/1.1" 200 0
+2024-06-08 11:50 http://127.0.0.1:9000 "PUT /backup/dir_1.tar HTTP/1.1" 200 0
+2024-06-08 11:50 test_dir/dir_1 copied to backup
+2024-06-08 11:50 http://127.0.0.1:9000 "PUT /backup/dir_2.tar HTTP/1.1" 200 0
+2024-06-08 11:50 test_dir/dir_2 copied to backup
+2024-06-08 11:50 http://127.0.0.1:9000 "PUT /backup/dir_3.tar HTTP/1.1" 200 0
+2024-06-08 11:50 test_dir/dir_3 copied to backup
+2024-06-08 11:50 Backup to bucket: backup completed!
+2024-06-08 11:50 http://127.0.0.1:9000 "PUT /backup/_test_logging.txt HTTP/1.1" 200 0
+2024-06-08 11:50 http://127.0.0.1:9000 "PUT /backup/_configfile.txt HTTP/1.1" 200 0
+2024-06-08 11:51 Backup to backup started
+2024-06-08 11:51 Starting new HTTP connection (1): 127.0.0.1:9000
+2024-06-08 11:51 http://127.0.0.1:9000 "GET /backup?location= HTTP/1.1" 200 0
+2024-06-08 11:51 http://127.0.0.1:9000 "PUT /backup/dir_1.tar HTTP/1.1" 200 0
+2024-06-08 11:51 test_dir/dir_1 copied to backup
+2024-06-08 11:51 http://127.0.0.1:9000 "PUT /backup/dir_2.tar HTTP/1.1" 200 0
+2024-06-08 11:51 test_dir/dir_2 copied to backup
+2024-06-08 11:51 http://127.0.0.1:9000 "PUT /backup/dir_3.tar HTTP/1.1" 200 0
+2024-06-08 11:51 test_dir/dir_3 copied to backup
+2024-06-08 11:51 Backup to bucket: backup completed!
+2024-06-08 11:51 http://127.0.0.1:9000 "PUT /backup/_test_logging.txt HTTP/1.1" 200 0
+2024-06-08 11:51 http://127.0.0.1:9000 "PUT /backup/_configfile.txt HTTP/1.1" 200 0
+2024-06-08 11:53 Backup to backup started
+2024-06-08 11:53 Backup to bucket: backup completed!
+2024-06-08 11:53 Starting new HTTP connection (1): 127.0.0.1:9000
+2024-06-08 11:53 http://127.0.0.1:9000 "GET /backup?location= HTTP/1.1" 200 0
+2024-06-08 11:53 http://127.0.0.1:9000 "PUT /backup/_test_logging.txt HTTP/1.1" 200 0
+2024-06-08 11:53 http://127.0.0.1:9000 "PUT /backup/_configfile.txt HTTP/1.1" 200 0
+2024-06-08 11:54 Backup to backup started
+2024-06-08 11:54 Starting new HTTP connection (1): 127.0.0.1:9000
+2024-06-08 11:54 http://127.0.0.1:9000 "GET /backup?location= HTTP/1.1" 200 0
+2024-06-08 11:54 http://127.0.0.1:9000 "PUT /backup/dir_1.tar HTTP/1.1" 200 0
+2024-06-08 11:54 test_dir/dir_1 copied to backup
+2024-06-08 11:54 http://127.0.0.1:9000 "PUT /backup/dir_2.tar HTTP/1.1" 200 0
+2024-06-08 11:54 test_dir/dir_2 copied to backup
+2024-06-08 11:54 http://127.0.0.1:9000 "PUT /backup/dir_3.tar HTTP/1.1" 200 0
+2024-06-08 11:54 test_dir/dir_3 copied to backup
+2024-06-08 11:54 http://127.0.0.1:9000 "PUT /backup/_test_logging.txt HTTP/1.1" 200 0
+2024-06-08 11:54 http://127.0.0.1:9000 "PUT /backup/_configfile.txt HTTP/1.1" 200 0
+2024-06-08 11:54 Backup to bucket: backup completed!
