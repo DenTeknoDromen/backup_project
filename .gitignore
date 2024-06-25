@@ -1,2 +1,5 @@
 venv/
 __pycache__/
+another_config.json
+music_config_skip.json
+music_config.json

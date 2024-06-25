@@ -7,7 +7,7 @@ import logger as logger
 def make_tarfile(dir_path, name):
     output_name = "./temp/" + name + ".tar"
     with tarfile.open(output_name, 'w:bz2') as tar:
-        tar.add(dir_path)
+        tar.add(dir_path, arcname=name)
 
 
 class FileUploader():
