@@ -32,7 +32,8 @@ def create_default_config():
                 "access_key": "minioadmin",
                 "secret_key": "minioadmin",
                 "bucket_name": "backup",
-                "dir_path": "test_dir",
-                "last_backup": "1995-11-25"
+                "dir_path": ["test_dir"],
+                "last_backup": "1995-11-25",
+                "full_backup": "yes"
     }
     write_config(default)

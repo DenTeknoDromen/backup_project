@@ -3,8 +3,11 @@
 "port": "9000",
 "access_key": "minioadmin",
 "secret_key": "minioadmin",
-"bucket_name": "another",
-"dir_path": "C:\\Users\\Dell\\Desktop\\another_dir",
-"last_backup": "2024-06-14 12:25",
+"bucket_name": "backup",
+"dir_path": [
+"test_dir",
+"C:\\Users\\Dell\\Desktop\\another_dir"
+],
+"last_backup": "2024-08-21 14:14",
 "full_backup": "yes"
 }

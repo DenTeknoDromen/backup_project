@@ -7,7 +7,7 @@ import utils as utils
 class Backup:
     def __init__(self, curr_path):
         self.config = utils.load_config(curr_path)
-        self.dir_path = self.config["dir_path"]
+        self.dir_paths = self.config["dir_path"]
 
         logger.write_log(f"Backup to {self.config['bucket_name']} started")
 
@@ -26,15 +26,16 @@ class Backup:
         if true_bucket != True:
             client.make_bucket(self.config["bucket_name"])
 
-        upload = file_uploader_2.FileUploader(client, self.config)
-        upload.file_browser(self.dir_path)
+        for paths in self.dir_paths:
+            upload = file_uploader_2.FileUploader(client, self.config)
+            upload.file_browser(paths)
 
         utils.write_config(self.config)
-
+        
         client.fput_object(
-            self.config["bucket_name"], "_" + logger.get_logname(), "test_logging.txt")
+            self.config["bucket_name"], f"_{logger.get_logname()}", f"logfiles/{logger.get_logname()}")
         client.fput_object(
-            self.config["bucket_name"], "_configfile.txt", curr_path)
+            self.config["bucket_name"], "_configfile.json", curr_path)
         
         logger.write_log(
             f"Backup to bucket: {self.config['bucket_name']} completed!\n")

@@ -3,3 +3,8 @@ __pycache__/
 another_config.json
 music_config_skip.json
 music_config.json
+configfiles/
+logfiles/
+test_logging.txt
+test_dir
+todo.txt
